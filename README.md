@@ -1,4 +1,4 @@
-#Kantu API Demo (Java)
+Kantu API Demo (Java)
 
 ## Prerequisites
 - JDK 1.8
