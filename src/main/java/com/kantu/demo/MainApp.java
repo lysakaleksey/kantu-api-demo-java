@@ -35,7 +35,7 @@ public class MainApp extends JFrame {
                 ActiveXComponent kantu = new ActiveXComponent("Kantu");
 
                 Variant result = kantu.invoke("open", new Variant(true));
-                if (result.getInt() > 0) {
+                if (result.getInt() < 0) {
                     log("Kantu Open Error: " + result + " Text: " + getLastError(kantu));
                 }
 
@@ -45,7 +45,6 @@ public class MainApp extends JFrame {
                 result = kantu.invoke("play", new Variant(myScript));
                 if (result.getInt() < 0) {
                     log("Script Replay Error: " + result + " Text: " + getLastError(kantu));
-
                 } else {
                     log("Script completed - OK");
                 }
@@ -68,6 +67,7 @@ public class MainApp extends JFrame {
     private void log(String message) {
         logBuffer.append(message).append("\n");
         logsArea.setText(logBuffer.toString());
+        logsArea.update(logsArea.getGraphics()); // revalidate logs on form
     }
 
     public static void main(String[] args) {
@@ -101,7 +101,7 @@ public class MainApp extends JFrame {
         label1.setText("Script:");
         mainPanel.add(label1, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         scriptField = new JTextField();
-        scriptField.setText("Demo-Automate-Forms.xkts");
+        scriptField.setText("Demo-Automate-Forms");
         mainPanel.add(scriptField, new GridConstraints(0, 2, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         logsPanel = new JPanel();
         logsPanel.setLayout(new GridLayoutManager(3, 2, new Insets(15, 15, 15, 15), -1, -1));
@@ -110,6 +110,7 @@ public class MainApp extends JFrame {
         logsPanel.add(spacer1, new GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
         logsArea = new JTextArea();
         logsArea.setEditable(false);
+        logsArea.setLineWrap(true);
         logsPanel.add(logsArea, new GridConstraints(2, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_WANT_GROW, null, new Dimension(150, 50), null, 0, false));
         final JLabel label2 = new JLabel();
         label2.setText("Log");
