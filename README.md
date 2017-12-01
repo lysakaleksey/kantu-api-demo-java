@@ -3,7 +3,7 @@ Kantu API Demo (Java)
 ## Prerequisites
 - JDK 1.8
 - JAVA_HOME environment variable must be set and point to JDK folder
-- Download https://github.com/A9T9/Kantu/blob/master/Demo%20Macros/Demo-Automate-Forms.kmacro
+- Download https://github.com/A9T9/Kantu/raw/master/Demo%20Macros/Demo-Automate-Forms.kmacro
 - Place above downloaded file to '<Current User>\Documents\Kantu\macros'
 
 ## How to build
