@@ -1,4 +1,4 @@
-#Kantu API Demo (Java)
+Kantu API Demo (Java)
 
 ## Prerequisites
 - JDK 1.8
@@ -12,7 +12,7 @@ Execute command file `build.cmd`
 ## How to start
 Execute command file `run.cmd` 
 
-## Java COM Bridge
+## Java COM Bridge (https://sourceforge.net/projects/jacob-project/)
 * Java library jacob v1.14.3
 * Native libaries downloaded into dist/dlls
 
