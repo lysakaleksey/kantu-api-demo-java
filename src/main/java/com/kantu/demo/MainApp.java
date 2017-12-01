@@ -54,7 +54,7 @@ public class MainApp extends JFrame {
                 log("Closing Kantu Browser ...");
                 kantu.invoke("close");
             } catch (Exception ex) {
-                log("Failed with " + ex.getMessage());
+                log("An exception occurred " + ex.getMessage());
                 ex.printStackTrace();
             }
         });
@@ -102,6 +102,7 @@ public class MainApp extends JFrame {
         mainPanel.add(label1, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         scriptField = new JTextField();
         scriptField.setText("Demo-Automate-Forms");
+        scriptField.setToolTipText("File name without extension. File must be present in '<Current User>\\Documents\\Kantu\\macros'");
         mainPanel.add(scriptField, new GridConstraints(0, 2, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         logsPanel = new JPanel();
         logsPanel.setLayout(new GridLayoutManager(3, 2, new Insets(15, 15, 15, 15), -1, -1));
