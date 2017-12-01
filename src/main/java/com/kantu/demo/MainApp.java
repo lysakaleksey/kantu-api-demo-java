@@ -34,6 +34,7 @@ public class MainApp extends JFrame {
                 String myScript = scriptField.getText();
                 ActiveXComponent kantu = new ActiveXComponent("Kantu");
 
+                //open the Kantu Browser. With kantu.open(false) you can connect to an already open instance
                 Variant result = kantu.invoke("open", new Variant(true));
                 if (result.getInt() < 0) {
                     log("Kantu Open Error: " + result + " Text: " + getLastError(kantu));
