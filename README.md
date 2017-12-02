@@ -5,7 +5,7 @@
 - JAVA_HOME environment variable must be set and point to JDK folder
 - Kantu - PRO Edition. Use trial version for playground
 - Download 'Demo Automate Forms' macros https://github.com/A9T9/Kantu/raw/master/Demo%20Macros/Demo-Automate-Forms.kmacro
-- Place above downloaded file to '<Current User>\Documents\Kantu\macros'
+- Place above downloaded file to 'Current User\Documents\Kantu\macros'
 
 ## How to build
 Execute command file `build.cmd`
