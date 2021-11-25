@@ -1,5 +1,7 @@
 <h1>Kantu API Demo (Java)</h1>
 
+Test
+
 ## Prerequisites
 - JDK 1.8
 - JAVA_HOME environment variable must be set and point to JDK folder
